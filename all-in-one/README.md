@@ -22,3 +22,12 @@ Host/bin/Release/net10.0/win-x64/publish/Host.exe
 ```
 
 Native AOT is enabled via `<PublishAot>true</PublishAot>` in the Host.csproj, which compiles the .NET application directly to native machine code for faster startup and reduced memory footprint.
+
+## Native AOT & Direct Dependencies
+
+The Host has a direct project reference to Plugin (`<ProjectReference Include="..\Plugin\Plugin.csproj" />`). In Native AOT compilation, this means:
+
+- **Static Binding**: Plugin code is compiled directly into the Host executable, not loaded as a separate DLL at runtime
+- **Known at Compile Time**: The AOT compiler analyzes all Plugin code during the build and includes it in the native binary
+- **No Dynamic Loading**: You cannot swap Plugin implementations at runtime or load different versions dynamically
+
