@@ -1,0 +1,7 @@
+﻿namespace Contracts;
+
+public interface IPlugin
+{
+    string Name { get; }
+    void Execute();
+}
