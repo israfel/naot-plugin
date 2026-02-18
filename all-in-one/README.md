@@ -18,7 +18,7 @@ dotnet publish Host -c Release -r win-x64
 
 This produces a self-contained, AOT-compiled executable at:
 ```
-Host/bin/Release/net10.0/win-x64/publish/Host.exe
+./artifacts/Host.exe
 ```
 
 Native AOT is enabled via `<PublishAot>true</PublishAot>` in the Host.csproj, which compiles the .NET application directly to native machine code for faster startup and reduced memory footprint.

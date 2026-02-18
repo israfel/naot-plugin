@@ -18,7 +18,7 @@ dotnet publish Host -c Release -r win-x64
 
 This produces a self-contained executable at:
 ```
-Host/bin/Release/net10.0/win-x64/publish/Host.exe
+./artifacts/Host.exe
 ```
 
 The application runs as managed .NET code with the runtime handling execution and memory management.
