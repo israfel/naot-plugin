@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <PublishDir>$(MSBuildThisFileDirectory)artifacts\</PublishDir>
+    <PublishAot>true</PublishAot>
+  </PropertyGroup>
+</Project>
